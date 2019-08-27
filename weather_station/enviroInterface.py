@@ -1,4 +1,4 @@
-# from bme280 import BME280
+from bme280 import BME280
 
 try:
     from smbus2 import SMBus
@@ -19,6 +19,6 @@ class enviroInterface(object):
         ''' Pressure collected on hPa '''
         return self.bme280.get_pressure()
 
-    def collect_humedity(self):
+    def get_humedity(self):
         ''' Pressure collected on % '''
         return self.bme280.get_humedity()

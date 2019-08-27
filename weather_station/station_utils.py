@@ -1,14 +1,41 @@
-import json
+from datetime import datetime
 
-def format_bme280(temperature, pressure, humedity)
-json_body = [{
+def get_current_time():
+    return(datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'))
+
+def format_bme280(temperature, pressure, humedity, current_time):
+    json_body_list = [
+        {
             "measurement": "temperature",
             "tags": {
-                "host": "server01",
-                "region": "us-west"
+                "sensor": "bme280",
+                "type": "temperature"
             },
-            "time": "2019-11-19T23:00:00Z",
+            "time": current_time,
             "fields": {
-                "temp": 3            }
-        }]
-influx_connection.write_points(json_body)
+                "temperature": temperature            
+            }
+        },
+        {
+            "measurement": "pressure",
+            "tags": {
+                "sensor": "bme280",
+                "type": "pressure"
+            },
+            "time": current_time,
+            "fields": {
+                "pressure": pressure            }
+        },
+        {
+            "measurement": "humedity",
+            "tags": {
+                "sensor": "bme280",
+                "type": "humedity"
+            },
+            "time": current_time,
+            "fields": {
+                "humedity": humedity            
+            }
+        }
+        ]
+    return json_body_list
