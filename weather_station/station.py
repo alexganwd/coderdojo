@@ -1,5 +1,4 @@
 from connectionDB import influxdbManager
-import connectionDB
 import time
 from enviroInterface import enviroInterface
 from station_utils import format_bme280, get_current_time
