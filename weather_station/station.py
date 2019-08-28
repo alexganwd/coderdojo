@@ -12,7 +12,7 @@ influx_connection =  influxdbManager(DATASOURCE)
 enviroInterface = enviroInterface()
 
 while True:
-# Collect bme280 sensor data ( Temperature, Pressure, Humedity)
+# Collect bme280 sensor data ( Temperature, Pressure, Humidity)
     current_time = get_current_time()
     json_pack = format_bme280(temperature=enviroInterface.get_temperature(), 
     pressure=enviroInterface.get_pressure(), 

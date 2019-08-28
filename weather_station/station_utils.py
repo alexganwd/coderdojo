@@ -3,7 +3,7 @@ from datetime import datetime
 def get_current_time():
     return(datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ'))
 
-def format_bme280(temperature, pressure, humedity, current_time):
+def format_bme280(temperature, pressure, humidity, current_time):
     json_body_list = [
         {
             "measurement": "temperature",
@@ -27,14 +27,14 @@ def format_bme280(temperature, pressure, humedity, current_time):
                 "pressure": pressure            }
         },
         {
-            "measurement": "humedity",
+            "measurement": "humidity",
             "tags": {
                 "sensor": "bme280",
-                "type": "humedity"
+                "type": "humidity"
             },
             "time": current_time,
             "fields": {
-                "humedity": humedity            
+                "humidity": humidity            
             }
         }
         ]
