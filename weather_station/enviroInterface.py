@@ -7,7 +7,7 @@ except ImportError:
 
 class enviroInterface(object):  
     ''' Access enviro+ interface '''  
-    def __init__(self):
+    def setUp(self):
         self.bus = SMBus(1)
         self.bme280 = BME280(i2c_dev=self.bus)
 
@@ -22,3 +22,6 @@ class enviroInterface(object):
     def get_humidity(self):
         ''' Pressure collected on % '''
         return self.bme280.get_humidity()
+
+    def destroy_instance(self):
+        self.__del__(self)
