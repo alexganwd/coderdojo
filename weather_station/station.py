@@ -8,12 +8,15 @@ DATASOURCE = "mStation"
 #  Setting up the connection to Influx to push metrics
 influx_connection =  influxdbManager(DATASOURCE)
 
+# Initialize enviro interface
+enviroInterface = enviroInterface()
+
 while True:
 # Collect bme280 sensor data ( Temperature, Pressure, Humedity)
     current_time = get_current_time()
     json_pack = format_bme280(temperature=enviroInterface.get_temperature(), 
     pressure=enviroInterface.get_pressure(), 
-    humedity=enviroInterface.get_humedity(), datetime=current_time
+    humedity=enviroInterface.get_humidity(), current_time=current_time
     )
     influx_connection.write_points(json_pack)
     time.sleep(30)

@@ -9,7 +9,7 @@ class enviroInterface(object):
     ''' Access enviro+ interface '''  
     def __init__(self):
         self.bus = SMBus(1)
-        self.bme280 = BME280(i2c_dev=bus)
+        self.bme280 = BME280(i2c_dev=self.bus)
 
     def get_temperature(self):
         ''' Temperature collected on Celsius '''
@@ -19,6 +19,6 @@ class enviroInterface(object):
         ''' Pressure collected on hPa '''
         return self.bme280.get_pressure()
 
-    def get_humedity(self):
+    def get_humidity(self):
         ''' Pressure collected on % '''
-        return self.bme280.get_humedity()
+        return self.bme280.get_humidity()
