@@ -19,4 +19,4 @@ while True:
     humedity=enviroInterface.get_humidity(), current_time=current_time
     )
     influx_connection.write_points(json_pack)
-    time.sleep(30)
+    time.sleep(15)
