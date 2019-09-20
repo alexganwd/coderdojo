@@ -94,3 +94,4 @@ The second semester,  We will focus on server client paradigm building the serve
 ## Week 12
 
 * 3D printing. Designing and printing the PI case.
+* Configure the application to start up during boot time.
