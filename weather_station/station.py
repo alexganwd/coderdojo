@@ -12,11 +12,10 @@ enviroInterface = enviroInterface()
 while True:
     # Initialize enviro interface
     enviroInterface.setUp()
-# Collect bme280 sensor data ( Temperature, Pressure, Humidity)
+    # Collect bme280 sensor data ( Temperature, Pressure, Humidity)
     current_time = get_current_time()
     json_pack = format_bme280(temperature=enviroInterface.get_temperature(), 
     pressure=enviroInterface.get_pressure(), 
-    humidity=enviroInterface.get_humidity(), current_time=current_time
-    )
+    humidity=enviroInterface.get_humidity(), current_time=current_time)
     influx_connection.write_points(json_pack)
     time.sleep(15)
