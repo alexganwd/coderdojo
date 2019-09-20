@@ -1,14 +1,14 @@
 # Weather Station
 
-## Overview
+## Overview
 
 The goal for this year is to build a weather station using a raspberry PI and enviro+ module to gather various atmospheric metrics and push them to a centralised database. These metrics will be consumed by a graphing tool that will represent each metric on its respective graph.
 
 The first semester, the focus will be on the client side. Ninjas will have to code the weather station and store the environment metrics locally into a database.  
 
-The second semester,  We will focus on server client paradigm building the server API to process the data from the weather stations.
+The second semester,  We will focus on server client paradigm building the server API to process the data from the weather stations and upgrading the weather station to post data over https. 
 
-## Material to be used
+## Material
 
 * Raspberry PI 0 WH:  <https://www.adafruit.com/product/3708>
 * Standoff + screw: <https://shop.pimoroni.com/products/brass-m2-5-standoffs-for-pi-hats-black-plated-pack-of-2>  
@@ -22,7 +22,7 @@ The second semester,  We will focus on server client paradigm building the serve
 * Go throw the plan for the first semester.
 * Send the link to GitHub page for the course.
 
-## Week 2
+## Week 2
 
 * Explain how the different sensors works:
   * What metrics can be gathered from each sensor.  
@@ -30,18 +30,18 @@ The second semester,  We will focus on server client paradigm building the serve
 * Show running python script gathering metrics from pressure and temperature sensors.
 * Introducing the concept of mock testing to replace the physical sensors with a software interface
 
-## Week 3
+## Week 3
 
 * Python review (II).
 * Building a mock for temperature, pressure and humidity sensors.
 
-## Week 4
+## Week 4
 
 * Object Oriented Programming in Python.
 * Design the main structure of the application.
   * Connection with the mock.
 
-## Week 5
+## Week 5
 
 * Add functionalities for gathering and printing to stdout the following environmental values:
   * Function for pressure.
@@ -76,7 +76,7 @@ The second semester,  We will focus on server client paradigm building the serve
 * Insert temperature, humidity and pressure into the database.
 * Query database to confirm metrics are saved.
 
-## Week 10
+## Week 10
 
 * Introduce new sensor: Gas sensor:
   * CO Carbon Monoxide.
@@ -85,12 +85,12 @@ The second semester,  We will focus on server client paradigm building the serve
   * C3H8 Propane.
 * Extend mock class to support the new metrics.
 
-## Week 11
+## Week 11
 
 * Add new function to the application to read gas sensor metrics.
 * Add unit tests for the new functions
 * Save new metrics into the DB
 
-## Week 12
+## Week 12
 
 * 3D printing. Designing and printing the PI case.
