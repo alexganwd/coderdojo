@@ -7,4 +7,4 @@ def get_pressure():
     return random.uniform(616.0000000,617.9999999)
 
 def get_humidity():
-    return random.uniform(30,60)
+    return random.uniform(616.0000000,617.9999999)
