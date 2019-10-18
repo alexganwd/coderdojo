@@ -18,6 +18,8 @@ def ask_user_input():
 def do_operation(operator, number1, number2):
     ''' Operate two numbers using operations variable 
         @operator: String 
+        @number1: Integer
+        @number2: Integer
     '''
     if operator == '+':
         result = number1 + number2
@@ -38,4 +40,5 @@ def do_operation(operator, number1, number2):
 
 # Main body of the program # 
 data_to_operate = ask_user_input()
-do_operation()
+# Result of ask_user_Input is returned as a tuple, so we have to access it as a list
+do_operation(operator=data_to_operate[0], number1=data_to_operate[1], number2=data_to_operate[2])
