@@ -9,7 +9,7 @@ def run(dry_run=False, display=False):
 
     import time
     import sqlite3
-
+    import os
     if display:
         import ST7735
 
@@ -40,9 +40,9 @@ def run(dry_run=False, display=False):
 
         # Text settings.
         # use a bitmap font
-        font = ImageFont.load("arial.pil")
         font_size = 10
-        font = ImageFont.truetype("arial.ttf", font_size)
+        path = os.path.dirname(os.path.realpath(__file__))
+        font = ImageFont.truetype(path + "/fonts/Asap/Asap-Bold.ttf", font_size)
         text_colour = (255, 255, 255)
         back_colour = (0, 170, 170)
 
