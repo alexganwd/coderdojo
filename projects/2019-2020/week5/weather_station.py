@@ -12,6 +12,11 @@ def run(dry_run=False, display=False):
 
     if display:
         import ST7735
+
+        from PIL import Image
+        from PIL import ImageDraw
+        from PIL import ImageFont
+
         # Create LCD class instance.
         display_interface = ST7735.ST7735(
             port=0,
