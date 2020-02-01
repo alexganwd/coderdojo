@@ -40,7 +40,7 @@ def run(dry_run=False, display=False):
 
         # Text settings.
         font_size = 10
-        font = ImageFont.truetype(size=font_size)
+        font = ImageFont.truetype("arial.ttf", font_size)
         text_colour = (255, 255, 255)
         back_colour = (0, 170, 170)
 
