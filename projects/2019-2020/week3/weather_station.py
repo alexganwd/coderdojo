@@ -2,7 +2,8 @@ import mock_bme280
 import time
 
 while True:
-    #define data
+
+    # define data
     temperature = mock_bme280.get_temperature()
     pressure = mock_bme280.get_pressure()
     humedity = mock_bme280.get_humidity()
