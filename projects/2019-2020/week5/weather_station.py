@@ -3,8 +3,8 @@ def run(dry_run=False, display=False):
     if dry_run:
         import mock_bme280
     else:
-        # from smbus2 import SMbus
-        # from bme280import BME280
+        import smbus2
+        from bme280 import BME280
         pass
 
     import time
@@ -58,8 +58,8 @@ def run(dry_run=False, display=False):
 
     # Initialise the BME280
     if not dry_run:
-        # bus = SMBus(1)
-        # bme280 = BME280(i2c_dev=bus)
+        bus = smbus2.SMBus(1)
+        bme280 = BME280(i2c_dev=bus)
         pass
 
     try:

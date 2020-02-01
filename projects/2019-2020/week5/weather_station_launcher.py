@@ -11,7 +11,7 @@ args = parser.parse_args()
 if args.dry_run:
     weather_station.run(dry_run=True)
 else:
-    if args.dispay:
+    if args.display:
         weather_station.run(dry_run=False, display=True)
     else:
         weather_station.run(dry_run=False)
