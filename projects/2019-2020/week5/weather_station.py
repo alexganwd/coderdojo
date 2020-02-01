@@ -39,6 +39,8 @@ def run(dry_run=False, display=False):
         draw = ImageDraw.Draw(img)
 
         # Text settings.
+        # use a bitmap font
+        font = ImageFont.load("arial.pil")
         font_size = 10
         font = ImageFont.truetype("arial.ttf", font_size)
         text_colour = (255, 255, 255)
